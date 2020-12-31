@@ -1,0 +1,11 @@
+os:
+  - osx
+language: swift
+osx_image: xcode12.3
+env:
+  - PROJECT_NAME=BiometricAuthentication
+install: 
+	swift package update
+script:
+  - swift build
+  - swift test
