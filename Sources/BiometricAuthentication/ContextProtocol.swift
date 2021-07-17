@@ -1,8 +1,8 @@
-
 import Foundation
 
 import LocalAuthentication
 
+/// Supports mocking of the ``LAContext`` type
 public protocol ContextProtocol {
     var biometryType: LABiometryType { get }
     var localizedCancelTitle: String? { get set }

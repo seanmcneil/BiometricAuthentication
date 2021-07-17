@@ -94,7 +94,7 @@ For Face ID to work with your app, you must also place an entry for `NSFaceIDUsa
 
 If you wish to run tests against the package, you can utilize the `ContextProtocol` to mock the `LAContext` class. Examples of this are included with the package's tests.
 
-Currently, the package is achieving a test coverage of 98.8%.
+Currently, the package is achieving a test coverage of 99%.
 
 ## Author
 

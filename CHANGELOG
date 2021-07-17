@@ -1,0 +1,11 @@
+
+# BiometricAuthentication
+
+- 1.0.1
+    - Improved documentation to support Xcode Docc
+    - Login now handles closure on `main` thread
+    - Updated unit tests
+    - Style improvements
+    
+- 1.0.0
+    - Initial release

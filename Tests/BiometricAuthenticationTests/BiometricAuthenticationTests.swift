@@ -5,6 +5,7 @@ import XCTest
 
 final class BiometricAuthenticationTests: XCTestCase {
     private let timeout: TimeInterval = 2.0
+    private let dispatchDelay = 0.05
 
     private var cancelleables = Set<AnyCancellable>()
 
@@ -145,7 +146,11 @@ final class BiometricAuthenticationTests: XCTestCase {
             .store(in: &cancelleables)
 
         ba.login()
-        ba.login()
+        // The response to `login()` is queued on main and requires
+        // a small delay to complete before a follow up is made.
+        DispatchQueue.main.asyncAfter(deadline: .now() + dispatchDelay) {
+            ba.login()
+        }
 
         waitForExpectations(timeout: timeout, handler: nil)
     }
@@ -206,7 +211,11 @@ final class BiometricAuthenticationTests: XCTestCase {
             .store(in: &cancelleables)
 
         ba.login()
-        ba.logout()
+        // The response to `login()` is queued on main and requires
+        // a small delay to complete before a follow up is made.
+        DispatchQueue.main.asyncAfter(deadline: .now() + dispatchDelay) {
+            ba.logout()
+        }
 
         waitForExpectations(timeout: timeout, handler: nil)
     }
