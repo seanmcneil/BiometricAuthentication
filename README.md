@@ -9,6 +9,28 @@ While supporting common usage, this package also includes the ability to mock th
 - macOS 10.15
 - Xcode 12
 
+## Installation
+
+### Swift Package Manager
+
+This package supports installation through Xcode's Swift Package Manager.
+
+It can also be added as a dependency to an existing package:
+
+```swift
+.package(name: "BiometricAuthentication",
+         url: "https://github.com/seanmcneil/BiometricAuthentication.git",
+         from: "1.0.0"),
+```
+
+### Cocoapods
+
+This package supports installation through the Cocoapods framework, starting with version 1.1.0.
+
+```ruby
+pod `BiometricAuthentication`, '~> 1.1.0'
+```
+
 ## Usage
 
 ### Initialize
