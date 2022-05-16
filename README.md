@@ -28,7 +28,7 @@ It can also be added as a dependency to an existing package:
 This package supports installation through the Cocoapods framework, starting with version 1.1.0.
 
 ```ruby
-pod `BiometricAuthentication`, '~> 1.1.0'
+pod `AuthenticationBiometric`, '~> 1.1.1'
 ```
 
 ## Usage
