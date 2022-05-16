@@ -1,5 +1,5 @@
+import Combine
 import LocalAuthentication
-import SwiftUI
 
 /// Provides an indication of the current state of authentication
 public enum AuthenticationAction: Equatable {
@@ -9,7 +9,7 @@ public enum AuthenticationAction: Equatable {
 }
 
 /// Support for error states that may be encountered while authenticating
-public enum BiometricError: Swift.Error {
+public enum BiometricError: Error {
     case unsupportedHardware
     case authenticationFailed
 }

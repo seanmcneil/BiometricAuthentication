@@ -1,6 +1,10 @@
 
 # BiometricAuthentication
 
+- 1.1.0
+    - Cocoapods support
+    - Style improvements
+
 - 1.0.1
     - Improved documentation to support Xcode Docc
     - Login now handles closure on `main` thread
